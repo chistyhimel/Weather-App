@@ -4,15 +4,15 @@ const api = {
 }
 
 const searchBox =  document.querySelector('.search-box');
+const searchBtn = document.querySelector('.searchBtn')
 
-searchBox.addEventListener('keypress',setQuery);
+searchBtn.addEventListener('click',function(){
+  getResults(searchBox.value);
+  console.log(searchBox.value)
+});
 
-function setQuery(evt){
-  if(evt.keyCode == 13){
-    getResults(searchBox.value);
-    console.log(searchBox.value)
-  }
-}
+
+
 function getResults(query){
   fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
   .then(response => response.json())
@@ -40,4 +40,8 @@ function responseFromServer(query){
 // function dateBuilder(query){
 
 // }
+
+
+
+
 
