@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@400;500&display=swap');
+body{
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 750px;
+    font-family: 'Lobster', cursive;
+}
+.card{
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 15px;
+}
+input{
+    font-family: 'Roboto Slab', serif;
+}
+button{
+    font-family: 'Roboto Slab', serif;
+}
+h2{
+        font-family: 'Roboto Slab', serif;
+    
+}
