@@ -1,47 +1,36 @@
 const api = {
-  key:'41dd09db9477cb4e7ac7117695b49c5f',
-  base:'http://api.openweathermap.org/data/2.5/'
-}
+  key: "41dd09db9477cb4e7ac7117695b49c5f",
+  url: "http://api.openweathermap.org/data/2.5/weather?q=",
+};
+const searchBox = document.querySelector(".search-box");
 
-const searchBox =  document.querySelector('.search-box');
-const searchBtn = document.querySelector('.searchBtn')
-
-searchBtn.addEventListener('click',function(){
-  getResults(searchBox.value);
-  console.log(searchBox.value)
+document.querySelector(".searchBtn").addEventListener("click", function () {
+  getResponse(searchBox.value);
 });
 
-
-
-function getResults(query){
-  fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-  .then(response => response.json())
-  .then(response=> responseFromServer(response))
+function getResponse(query) {
+  fetch(`${api.url}${query}&units=metric&APPID=${api.key}`)
+    .then((response) => response.json())
+    .then((response) => afterResponse(response));
 }
 
-function responseFromServer(query){
+function afterResponse(query) {
   console.log(query);
-  let city = document.querySelector('.location .city');
-  city.innerText = `${query.name}, ${query.sys.country}`;
-  // let now = new Date();
-  // let date = document.querySelector('.location .date');
-  // date.innerText = dateBuilder(now);
+  document.querySelector(
+    ".city"
+  ).innerText = `${query.name} , ${query.sys.country}`;
 
-  let temp = document.querySelector('.current .temp');
-  temp.innerHTML = `${Math.round(query.main.temp)}<span> °c</span>`;
+  document.querySelector(".temp").innerHTML = `${Math.round(
+    query.main.temp
+  )}<span> °c</span>`;
 
-  let weather = document.querySelector('.current .weather');
-  weather.innerText = query.weather[0].main;
+  document.querySelector(".current .weather").innerText = query.weather[0].main;
 
-  let tempHiLow = document.querySelector('.current .hi-low');
-  tempHiLow.innerText = `${Math.round(query.main.temp_min)} °c / ${Math.round(query.main.temp_max)} °c`
+  document.querySelector(
+    ".weatherIcon"
+  ).innerHTML = `<img src="http://openweathermap.org/img/wn/${query.weather[0].icon}@2x.png">`;
+
+  document.querySelector(".current .hi-low").innerText = `${Math.round(
+    query.main.temp_min
+  )} °c / ${Math.round(query.main.temp_max)} °c`;
 }
-
-// function dateBuilder(query){
-
-// }
-
-
-
-
-
