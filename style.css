@@ -44,8 +44,7 @@ hr{
     border: 1px solid rgba(36, 36, 36, 0.616);
     border-left: none;
     outline: none !important;
+    padding: 10px;
   }
 
-.searchButton:focus{
-    outline: rgb(15, 15, 15);
-}
+
