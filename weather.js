@@ -2,7 +2,7 @@ const api = {
   key: "41dd09db9477cb4e7ac7117695b49c5f",
   url: "http://api.openweathermap.org/data/2.5/weather?q=",
 };
-const searchBox = document.querySelector(".search-box");
+const searchBox = document.querySelector(".searchBox");
 
 document.querySelector(".searchBtn").addEventListener("click", function () {
   getResponse(searchBox.value);
