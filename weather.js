@@ -18,19 +18,19 @@ function afterResponse(query) {
   console.log(query);
   document.querySelector(
     ".city"
-  ).innerText = `${query.name} , ${query.sys.country}`;
+  ).innerHTML = `<i class="fas fa-map-marker-alt text-white mr-1 pt-4 text-danger"></i> ${query.name} , ${query.sys.country}`;
 
   document.querySelector(".temp").innerHTML = `${Math.round(
     query.main.temp
   )}<span> °c</span>`;
 
-  document.querySelector(".current .weather").innerText = query.weather[0].main;
+  document.querySelector(".weather").innerText = query.weather[0].main;
 
   document.querySelector(
     ".weatherIcon"
   ).innerHTML = `<img src="http://openweathermap.org/img/wn/${query.weather[0].icon}@2x.png">`;
 
-  document.querySelector(".current .hi-low").innerText = `${Math.round(
+  document.querySelector(".hi-low").innerText = `${Math.round(
     query.main.temp_min
   )} °c / ${Math.round(query.main.temp_max)} °c`;
 }
