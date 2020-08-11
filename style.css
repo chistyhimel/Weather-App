@@ -33,6 +33,7 @@ hr{
     outline: none;
     border: 1px solid rgba(36, 36, 36, 0.616);
     border-right: none;
+    box-sizing: border-box;
   }
 
   
