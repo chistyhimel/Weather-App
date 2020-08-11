@@ -11,6 +11,7 @@ body{
     right: 0;
     margin: auto;
     height: 520px;
+    max-width: 300px;
     box-shadow: 5px 5px 10px #191b1b, -5px -5px 10px #595959;
     background-color: #343434;
     border-radius: 30px;
