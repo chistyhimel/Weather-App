@@ -24,7 +24,7 @@ hr{
 }
 
 .searchTerm {
-    /* padding: 10px; */
+    padding: 13px;
     background-color: rgba(0, 0, 0, 0.342);
     color: #fff;
     border-radius: 50px 0px 0px 50px;
@@ -44,7 +44,7 @@ hr{
     border: 1px solid rgba(36, 36, 36, 0.616);
     border-left: none;
     outline: none !important;
-    padding: 10px;
+    padding: 8px;
   }
 
 
