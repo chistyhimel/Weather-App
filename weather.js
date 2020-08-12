@@ -28,6 +28,8 @@ function afterResponse(query) {
     ".city"
   ).innerHTML = `<i class="fas fa-map-marker-alt text-white mr-1 pt-4 text-danger"></i> ${query.name} , ${query.sys.country}`;
 
+  document.querySelector('.flag-container').innerHTML = `<img src="http://openweathermap.org/images/flags/${query.sys.country.toLowerCase()}.png" class="flag"></img>`
+
   document.querySelector(".temp").innerHTML = `${Math.round(
     query.main.temp
   )}<span> °c</span>`;
@@ -42,3 +44,5 @@ function afterResponse(query) {
     query.main.temp_min
   )} °c / ${Math.round(query.main.temp_max)} °c`;
 }
+
+{/* <img src="http://openweathermap.org/images/flags/{{weather.sys.country.toLowerCase()}}.png"></img> */}

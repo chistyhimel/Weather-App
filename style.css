@@ -10,7 +10,7 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    height: 535px;
+    height: 540px;
     max-width: 300px;
     box-shadow: 5px 5px 10px #191b1b, -5px -5px 10px #595959;
     background-color: #343434;
@@ -24,7 +24,7 @@ hr{
 }
 
 .searchTerm {
-    padding: 13px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.342);
     color: #fff;
     border-radius: 50px 0px 0px 50px;
@@ -46,6 +46,10 @@ hr{
     border-left: none;
     outline: none !important;
     padding: 8px;
+  }
+
+  .flag{
+      height: 25px;
   }
 
 footer{
