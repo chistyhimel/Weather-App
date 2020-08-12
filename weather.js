@@ -28,7 +28,7 @@ function afterResponse(query) {
     ".city"
   ).innerHTML = `<i class="fas fa-map-marker-alt text-white mr-1 pt-4 text-danger"></i> ${query.name} , ${query.sys.country}`;
 
-  document.querySelector('.flag-container').innerHTML = `<img src="http://openweathermap.org/images/flags/${query.sys.country.toLowerCase()}.png" class="flag"></img>`
+  document.querySelector('.flag-container').innerHTML = `<img src="flag-img/${query.sys.country.toLowerCase()}.png" class="flag"></img>`
 
   document.querySelector(".temp").innerHTML = `${Math.round(
     query.main.temp
