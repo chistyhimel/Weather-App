@@ -7,7 +7,7 @@ const searchBox = document.querySelector(".searchBox");
 searchBox.addEventListener('keypress',setQuery);
 
 function setQuery(evt){
-  if(evt.keyCode == 14){
+  if(evt.keyCode == 13){
     getResponse(searchBox.value);
   }
 }
